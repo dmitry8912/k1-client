@@ -23,3 +23,4 @@ C:\Users\Dmitry\source\repos\K1-Insight\obj\x64\Debug\K1-Insight.TrustInfo.xml
 C:\Users\Dmitry\source\repos\K1-Insight\bin\x64\Debug\Newtonsoft.Json.dll
 C:\Users\Dmitry\source\repos\K1-Insight\bin\x64\Debug\Newtonsoft.Json.xml
 C:\Users\Dmitry\source\repos\K1-Insight\obj\x64\Debug\K1-Insight.csprojAssemblyReference.cache
+C:\Users\Dmitry\source\repos\K1-Insight\bin\x64\Debug\App.config

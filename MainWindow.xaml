@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:K1_Insight"
         mc:Ignorable="d"
-        Title="K1-Connect" Height="117.391" Width="185.87" ResizeMode="NoResize" Topmost="True">
+        Title="K1-Connect" Height="133.101" Width="275.331" ResizeMode="NoResize" Topmost="True">
     <Grid>
-        <Label x:Name="StatusLabel" Content="" HorizontalAlignment="Left" Height="68" Margin="10,10,0,0" VerticalAlignment="Top" Width="160"/>
+        <Label x:Name="StatusLabel" Content="" Margin="10"/>
     </Grid>
 </Window>

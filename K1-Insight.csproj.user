@@ -14,6 +14,6 @@
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <StartArguments>k1://lock:6a36114c-2aaf-4a5b-a69f-b30cf15e0eed/</StartArguments>
+    <StartArguments>k1://lock:fe5cc7fb-820b-4b9e-86cc-dc99ee989677/</StartArguments>
   </PropertyGroup>
 </Project>

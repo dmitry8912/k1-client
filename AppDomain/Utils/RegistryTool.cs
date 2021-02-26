@@ -20,7 +20,7 @@ namespace K1_Insight.AppDomain.Utils
       {
         using (StreamWriter s = new StreamWriter("k1.reg"))
         {
-          s.Write(Resources.k1_url_handler.Replace("{PATH}", Environment.CurrentDirectory.Replace("\\", "\\\\") + "\\\\" + System.AppDomain.CurrentDomain.FriendlyName));
+          s.Write(Resources.k1_url_handler.Replace("{PATH}", Environment.CurrentDirectory.Replace("\\", "\\\\") + "\\\\" + "K1-Insight.exe"));
           s.Close();
           var process = Process.Start("regedit.exe", "/s " + Environment.CurrentDirectory + "\\k1.reg");
           process.WaitForExit();

@@ -21,3 +21,6 @@ C:\Users\Dmitry\source\repos\K1-Insight\bin\x64\Release\K1-Insight.application
 C:\Users\Dmitry\source\repos\K1-Insight\obj\x64\Release\K1-Insight.TrustInfo.xml
 C:\Users\Dmitry\source\repos\K1-Insight\obj\x64\Release\K1-Insight.exe.manifest
 C:\Users\Dmitry\source\repos\K1-Insight\obj\x64\Release\K1-Insight.application
+C:\Users\Dmitry\source\repos\K1-Insight\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\Dmitry\source\repos\K1-Insight\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\Dmitry\source\repos\K1-Insight\bin\x64\Release\App.config

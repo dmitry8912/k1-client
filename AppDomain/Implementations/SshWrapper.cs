@@ -20,7 +20,7 @@ namespace K1_Insight.AppDomain.Implementations
       this.endpoint = endpoint;
     }
 
-    public void Connect()
+    public string Connect()
     {
       var gatewayParams = endpoint.gateway.url.Split(':');
       var gateway = gatewayParams[0];
@@ -45,7 +45,10 @@ namespace K1_Insight.AppDomain.Implementations
       ProcessStartInfo mstscInfo = new ProcessStartInfo("mstsc.exe", mstscCmd);
       this.rdcProcess = new Process();
       this.rdcProcess.StartInfo = mstscInfo;
-      rdcThread = ProcessWatcher.WatchForExit(this.rdcProcess);
+      this.rdcProcess.Start();
+      this.rdcProcess.WaitForExit();
+
+      return String.Format("{0}{3}{1}{3}{2}", $"localhost:{portNumber}", endpoint.credential.name, endpoint.credential.plainPassword, Environment.NewLine);
     }
   }
 }

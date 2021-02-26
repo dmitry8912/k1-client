@@ -47,9 +47,8 @@ namespace K1_Insight
             StatusLabel.Content = String.Format("Connecting");
             lockInfo = Backend.GetLockInfo(Guid.Parse(paramsList.Last()));
             SshWrapper w = new SshWrapper(lockInfo);
-            w.Connect();
-            StatusLabel.Content = String.Format("Connected");
-            ProcessWatcher.ExtendLock(Guid.Parse(paramsList.Last()));
+            string result = w.Connect();
+            StatusLabel.Content = String.Format("Connected" + Environment.NewLine + result);
           } catch (Exception ex)
           {
             StatusLabel.Content = String.Format("Error: {0}", ex.Message);
