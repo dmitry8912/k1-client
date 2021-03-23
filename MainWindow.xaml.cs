@@ -34,6 +34,8 @@ namespace K1_Insight
     public MainWindow()
     {
       InitializeComponent();
+      EndpointURL.IsEnabled = false;
+      ConnectButton.IsEnabled = false;
       StatusLabel.Content = "Hello";
       RegistryTool.SetUrlHandler();
       if (Environment.GetCommandLineArgs().Count() > 1)
@@ -61,8 +63,28 @@ namespace K1_Insight
       } 
       else
       {
-        StatusLabel.Content = "No link";   
+        StatusLabel.Content = "No link" + Environment.NewLine + "Enter link in field below";
+        EndpointURL.IsEnabled = true;
+        ConnectButton.IsEnabled = true;
       };
+    }
+
+    private void ConnectButton_Click(object sender, RoutedEventArgs e)
+    {
+      Endpoint lockInfo;
+      try
+      {
+        var paramsList = EndpointURL.Text.Replace("k1://", "").Replace("/", "").Split(':').ToList();
+        lockInfo = Backend.GetLockInfo(Guid.Parse(paramsList.Last()));
+        SshWrapper w = new SshWrapper(lockInfo);
+        this.Hide();
+        string result = w.Connect();
+        this.Show();
+      }
+      catch (Exception ex)
+      {
+        StatusLabel.Content = String.Format("Error: {0}", ex.Message);
+      }
     }
   }
 }

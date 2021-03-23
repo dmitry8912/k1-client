@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:K1_Insight"
         mc:Ignorable="d"
-        Title="K1-Connect" Height="133.101" Width="275.331" ResizeMode="NoResize" Topmost="True">
+        Title="K1-Connect" Height="180.034" Width="275.331" ResizeMode="NoResize" Topmost="True">
     <Grid>
-        <Label x:Name="StatusLabel" Content="" Margin="10"/>
+        <Label x:Name="StatusLabel" Margin="10,10,9.8,0" Height="78" VerticalAlignment="Top"/>
+        <TextBox x:Name="EndpointURL" HorizontalAlignment="Left" Height="23" Margin="10,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249"/>
+        <Button x:Name="ConnectButton" Content="Подключиться" HorizontalAlignment="Left" Height="19" Margin="10,121,0,0" VerticalAlignment="Top" Width="249" Click="ConnectButton_Click"/>
     </Grid>
 </Window>

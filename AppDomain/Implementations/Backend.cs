@@ -17,6 +17,8 @@ namespace K1_Insight.AppDomain.Implementations
       
       using (var client = new HttpClient())
       {
+        var url = String.Format("{0}/endpoints/direct/info/{1}", ConfigurationSettings.AppSettings["url"], lockId.ToString());
+
         var response = client.GetAsync(String.Format("{0}/endpoints/direct/info/{1}", ConfigurationSettings.AppSettings["url"], lockId.ToString())).Result;
         if (response.IsSuccessStatusCode)
         {
